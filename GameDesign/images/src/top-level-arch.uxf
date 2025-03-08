@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>230</y>
+      <w>270</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;singleton&gt;&gt;
+Game_Board
+--
++Draw()
++Get_Random_Cell (Find_Empty_Cell)
++Move_Player (Direction,Status)
++Move_Monster(Monster_Ate_Player)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>420</y>
+      <w>320</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Game_Board_Cell
+--
++Piece_Count() return Natural
++Draw_Pieces(Length)
++Add_Piece(Piece)
++Get_Piece(Tag,Remove,Piece) return Boolean
++Piece_Can_Be_Added return Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>360</y>
+      <w>180</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+r2=-Board_Cells
+m2=*</panel_attributes>
+    <additional_attributes>160.0;10.0;160.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>320</y>
+      <w>90</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r2=Piece_List
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>190</x>
+      <y>100</y>
+      <w>260</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;singleton&gt;&gt;
+Game_Controller
+--
++Setup_Game_Board()
++Get_Player_Move(Direction,Quit)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>160</y>
+      <w>140</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>120.0;70.0;120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>230</y>
+      <w>270</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>/Piece/
+--
+/Draw(Length)/
++Can_Be_Only_One return Boolean
+--
+#Can_Share_Same_Location:Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
