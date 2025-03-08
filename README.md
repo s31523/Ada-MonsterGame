@@ -37,3 +37,7 @@ Conversion of UMLet files to image binaries is automated by a makefile.
 
 GnuMake for Windows can be [downloaded](https://gnuwin32.sourceforge.net/packages/make.htm) and installed, our use make from another source if you have it. Make needs
 to be readily available on a command prompt.
+
+# Design
+
+The [Game Design](./GameDesign/1-monsterGameDesign.md) page describes the details of the design.

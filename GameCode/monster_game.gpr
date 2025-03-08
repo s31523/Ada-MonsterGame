@@ -1,6 +1,6 @@
 project Monster_Game is
 
-   for Source_Dirs use ("src/General_Utlities/", "src/Game_Pieces/", "src");
+   for Source_Dirs use ("src/General_Utlities", "src/Game_Pieces", "src");
    for Object_Dir use "obj";
    for Main use ("monster_game.adb");
 
@@ -22,6 +22,10 @@ project Monster_Game is
 
    package Documentation is
    end Documentation;
+
+   package Pretty_Printer is
+      for Default_Switches ("ada") use ("-i2");
+   end Pretty_Printer;
 
 end Monster_Game;
 
