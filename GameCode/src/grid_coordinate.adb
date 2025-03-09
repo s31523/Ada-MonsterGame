@@ -1,5 +1,8 @@
-pragma Ada_2012;
+with Random_Generic;
+
 package body Grid_Coordinate is
+  package Random_Row is new Random_Generic ( Result_Subtype => Row_Range ) ;
+  package Random_Col is new Random_Generic ( Result_Subtype => Col_Range ) ;
 
   -------------------------
   -- Compute_Coordinates --
@@ -35,5 +38,13 @@ package body Grid_Coordinate is
         New_Col := Current.Col - 1;
     end case;
   end Compute_Coordinates;
+
+  function Get_Random_Location return Location_Type is
+  begin
+      return (Row => Random_Row.Random_Value , Col => Random_Col.Random_Value);
+  End Get_Random_Location;
+
+
+
 
 end Grid_Coordinate;

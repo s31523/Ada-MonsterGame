@@ -18,6 +18,10 @@ package World_2D is
   
   -- Draws the current state of the board
   procedure Draw (Object : Class_Type'Class);
+  
+  -- Builds world and various physical world constructs, e.g. obstacles.
+  procedure Setup_World (Object: in out Class_Type'class);
+   
    
   -- Puts a piece into the world at its set
   -- coordinates

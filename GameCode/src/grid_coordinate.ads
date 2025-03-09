@@ -46,5 +46,8 @@ package Grid_Coordinate is
       Direction : in      Compass_Direction;
       New_Row   :    out  Natural;
       New_Col   :    out  Natural);
+  
+  function Get_Random_Location return Location_Type;
+  
 
 end Grid_Coordinate;

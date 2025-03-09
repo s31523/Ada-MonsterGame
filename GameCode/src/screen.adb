@@ -9,7 +9,7 @@ package body Screen is
    -- Move_Cursor --
    -----------------
 
-   procedure Move_Cursor (X : Natural; Y : Natural) is
+   procedure Move_Cursor (X : Display_Axis; Y : Display_Axis) is
    begin
     Text_IO.New_Line;
     Text_IO.Put (Item => ASCII.ESC);

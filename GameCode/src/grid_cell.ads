@@ -52,15 +52,17 @@ package Grid_Cell is
   function Piece_Can_Be_Added ( Object : in Cell_Class ) return Boolean;
 
   
+  --  function Make
+  --    (-- Where the cell is on the board
+  --     Its_Location : Location.Location_Class;
+  --     -- Height of the Cell
+  --     Height       : Natural;
+  --  
+  --     -- Width of Cell
+  --     Width        : Natural
+  --    ) return Cell_Class_Ptr;
   function Make 
-    (-- Where the cell is on the board
-     Its_Location : Location.Location_Class;
-     -- Height of the Cell
-     Height       : Natural;
-     
-     -- Width of Cell
-     Width        : Natural
-    ) return Cell_Class_Ptr;
+  return Cell_Class_Ptr;
   
     function Board_Location (Object : Cell_Class) return Location.Location_Class;
 private

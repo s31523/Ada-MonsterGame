@@ -214,4 +214,12 @@ package body Grid_Cell is
     return New_Obj;
   end Make;
 
+  function Make
+    return Cell_Class_Ptr is
+    New_Obj : Cell_Class_Ptr := new Cell_Class;
+  begin
+    return New_Obj;
+  end Make;
+
+
 end Grid_Cell;

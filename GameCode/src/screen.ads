@@ -1,6 +1,16 @@
 package Screen is
+  
 
-  procedure Move_Cursor (X : Natural ; Y : Natural );
+  subtype Display_Axis is Natural;
+   
+  type Point_Type is 
+    record
+      X : Display_Axis;
+      Y : Display_Axis;
+    end record;
+
+  
+  procedure Move_Cursor (X : Display_Axis ; Y : Display_Axis );
   --procedure Move_Cursor (X : Natural );
   --procedure Move_Cursor (Y : Natural );
   
